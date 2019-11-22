@@ -92,7 +92,10 @@ namespace HtmlTools
                 {
                     if (file.EndsWith(".min" + ext, StringComparison.OrdinalIgnoreCase) ||
                         file.Contains("node_modules") ||
-                        file.Contains("bower_components"))
+                        file.Contains("bower_components") ||
+                        file.Contains("\\obj\\Release\\") ||
+                        file.Contains("\\obj\\Debug\\") ||
+                        file.Contains("\\obj\\publish\\"))
                     {
                         continue;
                     }
